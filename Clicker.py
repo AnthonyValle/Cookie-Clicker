@@ -17,7 +17,9 @@ auto_power_text = "Auto Power - "+str(a_cost)
 upgrades = 0
 upgrades_text = ('Total Upgrades - '+str(upgrades))
 
-# Functions
+''' Functions '''
+
+# Function to raise the price of Auto Power upgrade
 
 def raise_a_price():
     global count
@@ -27,6 +29,8 @@ def raise_a_price():
     a_cost = round((a_cost*1.20)+2)
     auto_button['text']="Auto Power - "+str(a_cost)
 
+# Function to raise the price of Clicking Power upgrade
+
 def raise_cp_price():
     global count
     global cp_cost
@@ -34,6 +38,8 @@ def raise_cp_price():
     counter['text']=count
     cp_cost = round((cp_cost*1.25)+1.5)
     click_power_button['text']="Clicking Power - "+str(cp_cost)
+
+# Function to upgrade Auto Power
 
 def upgrade_auto_click_level():
     global a_cost
@@ -51,6 +57,7 @@ def upgrade_auto_click_level():
         text = ('Total Upgrades - '+str(upgrades))
         upgrades_label_text['text'] = text
 
+# Function to turn on Auto Power upgrade
 
 def auto_click():
     global a_cost
@@ -70,6 +77,7 @@ def auto_click():
         text = ('Total Upgrades - '+str(upgrades))
         upgrades_label_text['text'] = text
 
+# Function to upgrade Clicking Power
 
 def upgrade_level():
     global count
@@ -87,7 +95,7 @@ def upgrade_level():
         text = ('Total Upgrades - '+str(upgrades))
         upgrades_label_text['text'] = text
 
-
+# Function when clicking the Cookie
 
 def append_counter():
     global level
@@ -96,11 +104,13 @@ def append_counter():
     count = round(count)
     counter['text']=str((count))
 
+''' End of functions '''
+
 # Window
 
 window = tk.Tk()
 window.geometry("800x700")
-window.title('Cookie Clicker')
+window.title('Cookie Clicker ')
 
 # Image
 
